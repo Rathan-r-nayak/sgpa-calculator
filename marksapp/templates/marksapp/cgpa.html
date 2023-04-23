@@ -1,0 +1,111 @@
+{% extends "main.html" %}
+
+{%block title%}|cgpa{%endblock title%}
+<style>
+    {%block css%}
+    body{
+        background-image: url("/static/cgpa_bck.png");
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #h2{
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    }
+    .cls_sem{
+    height: 40px;
+    border-radius: 6px;
+    margin: 10px;
+    margin-left: 18px;
+    border:2px solid gold;
+    background-color: rgba(9, 9, 118, 0.749);
+    color: gold;
+  }
+  .cls_sem:hover{
+    border:2px solid aqua;
+  }
+  .lbls{
+    color: yellow;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  }
+  #id_submit{
+    margin-left: 45%;
+    margin-top: 10px;
+  }
+  #id_submitb{
+    height: 30px;
+    background-color: rgb(0, 136, 255);
+    border-radius: 5px;
+    border:2px solid aqua;
+  }
+  #id_submitb:hover{
+    border:2px solid gold;
+    cursor:pointer;
+  }
+  #id_usn{
+    background-color: rgba(0, 234, 255, 0.786);
+    color: rgb(4, 4, 78);
+  }
+  {%endblock css%}
+</style>
+
+{%block content%}
+<div> 
+    <h2 id="h2">CGPA</h2>
+</div>
+
+<form action="action" method="post">{%csrf_token%}
+  <div id="div_usn">
+    <label class="lbls" for="usn">USN:</label>
+    <input class="cls_sem" id="id_usn" type="text" placeholder="University Seat Number" name="usn">
+  </div>
+  
+  <div id="div_sem1">
+    <label class="lbls" for="sem_cgpa1">SEMESTER 1:</label>
+    <input class="cls_sem" id="id_sem1" type="float" placeholder="semester1 sgpa" name="sem_cgpa1">
+  </div>
+
+  <div id="div_sem2">
+    <label class="lbls"  for="sem_cgpa2">SEMESTER 2:</label>
+    <input class="cls_sem" id="id_sem2" type="float" placeholder="semester2 sgpa" name="sem_cgpa2">
+  </div>
+
+  <div id="div_sem3">
+    <label class="lbls"  for="sem_cgpa3">SEMESTER 3:</label>
+    <input class="cls_sem" id="id_sem3" type="float" placeholder="semester3 sgpa" name="sem_cgpa3">
+  </div>
+
+  <div id="div_sem4">
+    <label class="lbls"  for="sem_cgpa4">SEMESTER 4:</label>
+    <input class="cls_sem" id="id_sem4" type="float" placeholder="semester4 sgpa" name="sem_cgpa4">
+  </div>
+
+  <div id="div_sem5">
+    <label class="lbls"  for="sem_cgpa5">SEMESTER 5:</label>
+    <input  class="cls_sem" id="id_sem5" type="float" placeholder="semester5 sgpa" name="sem_cgpa5">
+  </div>
+
+  <div id="div_sem6">
+    <label class="lbls"  for="sem_cgpa6">SEMESTER 6:</label>
+    <input class="cls_sem" id="id_sem6" type="float" placeholder="semester6 sgpa" name="sem_cgpa6">
+  </div>
+
+  <div id="div_sem7">
+    <label class="lbls"  for="sem_cgpa7">SEMESTER 7:</label>
+    <input class="cls_sem" id="id_sem7" type="float" placeholder="semester7 sgpa" name="sem_cgpa7">
+  </div>
+
+  <div id="div_sem8">
+    <label class="lbls" for="sem_cgpa8">SEMESTER 8:</label>
+    <input class="cls_sem" id="id_sem8" type="float" placeholder="semester8 sgpa" name="sem_cgpa8">
+  </div>
+
+  <div id="id_submit">
+    <input id="id_submitb" type="submit" name="submit" />
+  </div>
+{%endblock content%}
+
+{%block js%}
+{%endblock js%}

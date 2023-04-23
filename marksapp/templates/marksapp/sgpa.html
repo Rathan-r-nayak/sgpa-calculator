@@ -1,0 +1,166 @@
+{% extends 'main.html' %}
+
+{%block title%}|sgpa{%endblock title%}
+<style>
+  /* ----------------------------------- CSS-----------------------------------*/
+  {%block css%}
+  body{
+    background-image: url("/static/sgpa_back.png");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  #h2{
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  }
+  #id_usn{
+    background-color: rgba(0, 234, 255, 0.786);
+    color: rgb(4, 4, 78);
+    margin-left: 70px;
+  }
+  #id_sem{
+    height: 40px;
+    border-radius: 6px;
+    margin: 10px;
+    border:2px solid  rgb(0, 100, 143);
+    background-color: rgba(255, 251, 1, 0.858);
+    color: black;
+  }
+  #id_sem:hover{
+    border:2px solid aqua;
+  }
+  .cls_sub{
+    height: 40px;
+    border-radius: 6px;
+    margin: 10px;
+    margin-left: 18px;
+    border:2px solid gold;
+    background-color: rgba(0, 100, 143, 0.950);
+    color: gold;
+  }
+  .cls_sub:hover{
+    border:2px solid aqua;
+  }
+  .lbls{
+    color: yellow;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  }
+  #id_submitb{
+    height: 30px;
+    background-color: rgb(0, 136, 255);
+    border-radius: 5px;
+    border:2px solid aqua;
+    margin-left: 32%;
+  }
+  #id_submitb:hover{
+    border:2px solid gold;
+    cursor:pointer;
+  }
+
+
+
+
+
+  {%endblock css%}
+  /* --------------------------------end CSS-----------------------------------*/
+</style>
+
+
+{%block content%}
+<h2 id="h2">SGPA</h2>
+<form method="post" action="action">{%csrf_token%}
+  <div>
+    <p class="lbls">SEMESTER :</p>
+    <input id="id_sem1" type="radio" name="semester" value="sem1">
+    <label for="id_sem1">sem1</label>
+    <input id="id_sem2" type="radio" name="semester" value="sem2">
+    <label for="id_sem2">sem2</label>
+    <input id="id_sem3" type="radio" name="semester" value="sem3">
+    <label for="id_sem3">sem3</label>
+    <input id="id_sem4" type="radio" name="semester" value="sem4">
+    <label for="id_sem4">sem4</label>
+    <input id="id_sem5" type="radio" name="semester" value="sem5">
+    <label for="id_sem5">sem5</label>
+    <input id="id_sem6" type="radio" name="semester" value="sem6">
+    <label for="id_sem6">sem6</label>
+    <input id="id_sem7" type="radio" name="semester" value="sem7">
+    <label for="id_sem7">sem7</label>
+    <input id="id_sem8" type="radio" name="semester" value="sem8">
+    <label for="id_sem8">sem8</label>
+  </div>
+  <br>
+  <div id="div_usn">
+    <label class="lbls" for="usn">USN:</label>
+    <input class="cls_sub" id="id_usn" type="text" placeholder="University Seat Number" name="usn">
+  </div>
+
+  <div id="div_sub1">
+    <label class="lbls" for="sub_marks1">SUBJECT 1:</label>
+    <input class="cls_sub" id="id_code1" type="text" placeholder="subject code" name="sub_code1">
+    <input class="cls_sub" id="id_credit1" type="number" placeholder="subject credit" name="sub_credit1">
+    <input class="cls_sub" id="id_marks1" type="text" placeholder="subject marks" name="sub_marks1">
+  </div>
+
+  <div id="div_sub2">
+    <label class="lbls" for="sub_marks2">SUBJECT 2:</label>
+    <input class="cls_sub" id="id_code2" type="text" placeholder="subject code" name="sub_code2">
+    <input class="cls_sub" id="id_credit2" type="number" placeholder="subject credit" name="sub_credit2">
+    <input class="cls_sub" id="id_marks2" type="text" placeholder="subject marks" name="sub_marks2">
+  </div>
+
+  <div id="div_sub3">
+    <label class="lbls" for="sub_marks3">SUBJECT 3:</label>
+    <input class="cls_sub" id="id_code3" type="text" placeholder="subject code" name="sub_code3">
+    <input class="cls_sub" id="id_credit3" type="number" placeholder="subject credit" name="sub_credit3">
+    <input class="cls_sub" id="id_marks3" type="text" placeholder="subject marks" name="sub_marks3">
+  </div>
+
+  <div id="div_sub4">
+    <label class="lbls" for="sub_marks4">SUBJECT 4:</label>
+    <input class="cls_sub" id="id_code4" type="text" placeholder="subject code" name="sub_code4">
+    <input class="cls_sub" id="id_credit4" type="number" placeholder="subject credit" name="sub_credit4">
+    <input class="cls_sub" id="id_marks4" type="text" placeholder="subject marks" name="sub_marks4">
+  </div>
+
+  <div id="div_sub5">
+    <label class="lbls" for="sub_marks5">SUBJECT 5:</label>
+    <input class="cls_sub" id="id_code5" type="text" placeholder="subject code" name="sub_code5">
+    <input class="cls_sub" id="id_credit5" type="number" placeholder="subject credit" name="sub_credit5">
+    <input class="cls_sub" id="id_marks5" type="text" placeholder="subject marks" name="sub_marks5">
+  </div>
+
+  <div id="div_sub6">
+    <label class="lbls" for="sub_marks6">SUBJECT 6:</label>
+    <input class="cls_sub" id="id_code6" type="text" placeholder="subject code" name="sub_code6">
+    <input class="cls_sub" id="id_credit6" type="number" placeholder="subject credit" name="sub_credit6">
+    <input class="cls_sub" id="id_marks6" type="text" placeholder="subject marks" name="sub_marks6">
+  </div>
+
+  <div id="div_sub7">
+    <label class="lbls" for="sub_marks7">SUBJECT 7:</label>
+    <input class="cls_sub" id="id_code7" type="text" placeholder="subject code" name="sub_code7">
+    <input class="cls_sub" id="id_credit7" type="number" placeholder="subject credit" name="sub_credit7">
+    <input class="cls_sub" id="id_marks7" type="text" placeholder="subject marks" name="sub_marks7">
+  </div>
+
+  <div id="div_sub8">
+    <label class="lbls" for="sub_marks8">SUBJECT 8:</label>
+    <input class="cls_sub" id="id_code8" type="text" placeholder="subject code" name="sub_code8">
+    <input class="cls_sub" id="id_credit8" type="number" placeholder="subject credit" name="sub_credit8">
+    <input class="cls_sub" id="id_marks8" type="text" placeholder="subject marks" name="sub_marks8">
+  </div>
+
+  <div id="div_sub9">
+    <label class="lbls" for="sub_marks9">SUBJECT 9:</label>
+    <input class="cls_sub" id="id_code9" type="text" placeholder="subject code" name="sub_code9">
+    <input class="cls_sub" id="id_credit9" type="number" placeholder="subject credit" name="sub_credit9">
+    <input class="cls_sub" id="id_marks9" type="text" placeholder="subject marks" name="sub_marks9">
+  </div>
+
+  <div id="id_submit">
+    <input id="id_submitb" type="submit" name="submit" />
+  </div>
+</form>
+{%endblock content%}

@@ -1,0 +1,118 @@
+{% extends "main.html" %}
+
+<style>
+    /* ------------------------------------CSS-----------------------------------*/
+    {%block css%}
+
+    body{
+        background-image: url("static/bckgnd.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    #logo{
+        display: inline;
+    }
+    #h1{
+        display: inline;
+        color: rgb(52, 4, 99);
+        margin-left: 20%;;
+    }
+    #div_csgpa{
+        margin-top: 70px;
+        float: right;
+        margin-right: 80px;
+    }
+    #div_cgpa{
+        margin-top: 20px;
+    }
+    #div_sgpa{
+        margin-bottom: 20px;
+    }
+    #btn_sgpa{
+        width: 250px;
+        height: 50px;
+        border-radius: 50px;
+        color: gold;
+        background-color: rgb(5, 5, 60);
+        border: 2px solid greenyellow;
+    }
+    #btn_sgpa:hover{
+        border:inherit;
+        cursor: pointer;
+    }
+    #btn_cgpa{
+        width: 250px;
+        height: 50px;
+        border-radius: 50px;
+        color: gold;
+        background-color: rgb(5, 5, 60);
+        border: 2px solid greenyellow;
+    }
+    #btn_cgpa:hover{
+        border-style: inherit;
+        cursor: pointer;
+    }
+    #a_sgpa{
+        text-decoration: none;
+        color: gold;
+    }
+    #a_cgpa{
+        text-decoration: none;
+        color: gold;
+    }
+    #id_hrt{
+        height: 50px;
+        margin-top: 330px;
+        margin-left: 45%;
+        animation-name: "beat";
+        animation-duration: .5s;
+        animation-iteration-count:infinite ;
+    }
+    @keyframes beat {
+        from{
+            height:50px;
+        }
+        to{
+            height: 70px;
+        }
+    }
+
+
+
+
+
+
+    {%endblock%}
+    /* --------------------------------end CSS-----------------------------------*/
+</style>
+
+
+{% block content %}
+<div>
+<a href=""><img id="logo" height="30px" src="static/logo_.png" alt=""></a>
+<h1 id="h1">CGPA CALCULATOR</h1>
+</div>
+<div id="div_csgpa">
+    <div id="div_sgpa">
+        <a id="a_sgpa" href="sgpa"><button id="btn_sgpa">SGPA</button></a>
+    </div>
+    <div id="div_sgpa">
+        <a id="a_cgpa" href="cgpa"><button id="btn_cgpa">CGPA</button></a>
+    </div>
+</div>
+<br>
+<img id="id_hrt" src="static/hrt.png" alt="">
+
+
+
+
+
+
+
+
+{% endblock content%}
+
+
+{%block js%}
+{%endblock js%}

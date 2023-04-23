@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+
+<style>
+    {%block css%}
+    body{
+        background-color: black;
+        background-image: url("/static/results.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: aqua;
+    }
+    #id_sgpares{
+        margin-top: 10%;
+        text-align: center;
+    }
+    {%endblock css%}
+</style>
+
+
+{%block content%}
+<h3 id="id_sgpares">SGPA={{sgpa}}</h3>
+{%endblock content%}
